@@ -12,7 +12,6 @@
 #include "xpwm.h"
 
 #include "app_main.h"
-#include "User_NvsData.h"
 #include "User_DataProcess.h"
 #include "Dev_Dht11.h"
 #include "Dev_Pwm.h"
@@ -155,17 +154,17 @@ static void Json_Recv_Cmd_Process(mqtt_cmd_struct* cmd)
 
 
 
-// /**
-//  * @description: joson_create_uav_data_send
-//  * @param {type} 
-//  * @return: 
-//  */
-// void joson_create_uav_data_send()
-// {
-//     /* declare a few. */
-// 	cJSON *root = NULL;
-// 	cJSON *head = NULL;
-// 	cJSON *data = NULL;
+/**
+ * @description: joson_create_uav_data_send
+ * @param {type} 
+ * @return: 
+ */
+void joson_create_uav_data_send()
+{
+    /* declare a few. */
+	cJSON *root = NULL;
+	cJSON *head = NULL;
+	cJSON *data = NULL;
 		
     /* Here we construct some JSON standards, from the JSON site. */
 	static uint64_t msg_num = 0;
@@ -203,13 +202,13 @@ static void Json_Recv_Cmd_Process(mqtt_cmd_struct* cmd)
         /*publish JSON data to server*/
         mqtt_publish_data_interface(MqttTopicPub, pub_payload,0,0);
 
-// 		if(pub_payload!=NULL)
-// 		{
-// 			free(pub_payload);
-// 		}
+		if(pub_payload!=NULL)
+		{
+			free(pub_payload);
+		}
 
-//     cJSON_Delete(root);
-// }
+    cJSON_Delete(root);
+}
 
 
 
