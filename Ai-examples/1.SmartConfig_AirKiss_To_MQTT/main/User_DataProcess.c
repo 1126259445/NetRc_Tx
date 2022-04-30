@@ -3,12 +3,16 @@
 #include "freertos/task.h"
 #include "freertos/event_groups.h"
 #include "freertos/queue.h"
+#include "freertos/semphr.h"
+#include "esp_log.h"
 #include "mqtt_client.h"
 #include "cJSON.h"
 #include <stdio.h>
 #include "string.h"
 #include "xpwm.h"
 
+#include "app_main.h"
+#include "User_NvsData.h"
 #include "User_DataProcess.h"
 #include "Dev_Dht11.h"
 #include "Dev_Pwm.h"
@@ -18,6 +22,8 @@
 
 /*------------------------------JSON data---------------------------------------*/
 /*init mqtt_client publish_data for mqtt*/
+static const char *TAG = "User_DataProcess";
+
 #ifndef DEVECE_ID
 #define DEVECE_ID "DEV00003"
 #endif
@@ -149,17 +155,17 @@ static void Json_Recv_Cmd_Process(mqtt_cmd_struct* cmd)
 
 
 
-/**
- * @description: joson_create_uav_data_send
- * @param {type} 
- * @return: 
- */
-void joson_create_uav_data_send()
-{
-    /* declare a few. */
-	cJSON *root = NULL;
-	cJSON *head = NULL;
-	cJSON *data = NULL;
+// /**
+//  * @description: joson_create_uav_data_send
+//  * @param {type} 
+//  * @return: 
+//  */
+// void joson_create_uav_data_send()
+// {
+//     /* declare a few. */
+// 	cJSON *root = NULL;
+// 	cJSON *head = NULL;
+// 	cJSON *data = NULL;
 		
     /* Here we construct some JSON standards, from the JSON site. */
 	static uint64_t msg_num = 0;
@@ -197,13 +203,13 @@ void joson_create_uav_data_send()
         /*publish JSON data to server*/
         mqtt_publish_data_interface(MqttTopicPub, pub_payload,0,0);
 
-		if(pub_payload!=NULL)
-		{
-			free(pub_payload);
-		}
+// 		if(pub_payload!=NULL)
+// 		{
+// 			free(pub_payload);
+// 		}
 
-    cJSON_Delete(root);
-}
+//     cJSON_Delete(root);
+// }
 
 
 
@@ -380,3 +386,23 @@ void Task_CreatJSON(void *pvParameters)
 		vTaskDelay(100/portTICK_RATE_MS);
 	}
 }
+
+// /**
+//  * @description: Task_CreatJSON 
+//  * @param {type} 
+//  * @return: 
+//  */
+// extern bool isConnect2Server;
+// void Task_CreatJSON(void *pvParameters)
+// {
+// 	while(1)
+// 	{
+// 		//post_data_to_clouds();
+// 		if (isConnect2Server)
+// 		{
+// 			joson_create_uav_data_send();
+// 		}
+
+// 		vTaskDelay(1000/portTICK_RATE_MS);
+// 	}
+// }

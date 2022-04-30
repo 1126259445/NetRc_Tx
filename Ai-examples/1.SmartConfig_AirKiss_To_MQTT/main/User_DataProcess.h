@@ -8,7 +8,7 @@
 
 typedef struct 
 {
-	char allData[1024];
+	char allData[2500];
 	int dataLen;
 } User_data;
 

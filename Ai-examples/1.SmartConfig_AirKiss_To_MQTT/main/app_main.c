@@ -41,9 +41,11 @@
 #include <lwip/netdb.h>
 #include "xpwm.h"
 
+#include "User_HttpSever.h"
 #include "User_HttpRequest_Weather.h"
 #include "User_HttpRequest_Time.h"
 #include "User_DataProcess.h"
+#include "User_NvsData.h"
 #include "User_Sensor.h"
 #include "User_HttpSever.h"
 #include "Dev_Oled_I2c.h"
@@ -52,14 +54,14 @@
 #include "Dev_PwmIn.h"
 #include "Dev_Led.h"
 
-void TaskSmartConfigAirKiss2Net(void *parm);
 
+void TaskSmartConfigAirKiss2Net(void *parm);
 //  *    基于 esp-idf esp8266芯片 rtos3.0 sdk 开发，共勉！
 //  *
 //  *   这是esp-touch或 微信airkiss配网以及近场发现的功能和连接MQTT服务器的的demo示范！
 //  *
-//  *   按键接线 GPIO0引脚下降沿触发，LED的正极接GPIO12，负极接GND；
-//  *   按键短按 ，改变灯具状态并上报状态到服务器；
+//  *   按键接线 GPIO0引脚下降沿触发;
+//  *   按键短按 ，
 //  *   按键长按 ，进去配网模式，搜索 "安信可科技" 微信公众号点击 WiFi配置；
 //  *
 //  *    有任何技术问题邮箱： support@aithinker.com
@@ -75,6 +77,9 @@ static xTaskHandle handleLlocalFind = NULL;
 static xTaskHandle handleMqtt = NULL;
 xQueueHandle ParseJSONQueueHandler = NULL; //解析json数据的队列
 xTaskHandle mHandlerParseJSON = NULL;	  //任务队列
+SemaphoreHandle_t xSemaphore;
+
+
 
 //近场发现自定义消息
 uint8_t deviceInfo[100] = {};
@@ -364,7 +369,6 @@ static esp_err_t event_handler(void *ctx, system_event_t *event)
 		{
 			printf("create TaskXMqttRecieve thread failed.\n");
 		}
-
 		isWifiConnectd = true;
 		break;
 
@@ -488,15 +492,42 @@ void TaskSmartConfigAirKiss2Net(void *parm)
 	}
 }
 
+/******************************************************************************
+ * FunctionName : Set_AP
+ * Description  : entry of user application, init user function here
+ * Parameters   : none
+ * Returns      : none
+*******************************************************************************/
+void Set_STA(void)
+{
+	esp_wifi_stop();
+/*
+	tcpip_adapter_init();
+	wifi_event_group = xEventGroupCreate();
+	ESP_ERROR_CHECK(esp_event_loop_init(event_handler, NULL));
+*/
+	wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
+	ESP_ERROR_CHECK(esp_wifi_init(&cfg));
+	
+	ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_STA));
+	ESP_ERROR_CHECK(esp_wifi_start());
+}
+
 //短按函数
 static void ButtonShortPressCallBack(void *arg)
 {
 	ESP_LOGI(TAG, "ButtonShortPressCallBack  esp_get_free_heap_size(): %d ", esp_get_free_heap_size());
-
+	ESP_LOGI(TAG, "ENTER Set_AP");
+	//esp_smartconfig_stop();
+	//Set_AP();
+	
 }
 //长按函数
+
 static void ButtonLongPressCallBack(void *arg)
 {
+	static uint8_t flag = 1;
+
 	ESP_LOGI(TAG, "ButtonLongPressCallBack  esp_get_free_heap_size(): %d ", esp_get_free_heap_size());
 
 	if(CurrentMod_Get() == SMARTCONFIG)
@@ -579,7 +610,7 @@ void app_main(void)
 	//获取芯片的内存分布，返回值具体见结构体 flash_size_map
 	printf("     system_get_flash_size_map(): %d \n", system_get_flash_size_map());
 	//获取mac地址（station模式）
-	uint8_t mac[6];
+	uint8_t mac[6]  ={0};
 	esp_read_mac(mac, ESP_MAC_WIFI_STA);
 	sprintf(deviceUUID, "%02x%02x%02x%02x%02x%02x", mac[0], mac[1], mac[2], mac[3], mac[4], mac[5]);
 	sprintf((char *)deviceInfo, "{\"type\":\"%s\",\"mac\":\"%s\"}", DEVICE_TYPE, deviceUUID);
@@ -603,7 +634,9 @@ void app_main(void)
 	xTaskCreate(TaskButton, "TaskButton", 1024, NULL, 6, NULL);
 	//xTaskCreate(Task_Sensor, "Task_Sensor", 1024, NULL, 6, NULL);
 	xTaskCreate(Task_CreatJSON, "Task_CreatJSON", 1024*5, NULL, 6, NULL);
-	
+	/* 创建信号量 */
+    xSemaphore = xSemaphoreCreateBinary();
+
 	tcpip_adapter_init();
 	wifi_event_group = xEventGroupCreate();
 	ESP_ERROR_CHECK(esp_event_loop_init(event_handler, NULL));

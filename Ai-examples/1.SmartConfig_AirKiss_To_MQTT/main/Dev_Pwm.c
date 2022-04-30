@@ -23,20 +23,8 @@
 #include "esp8266/pin_mux_register.h"
 
 #include "driver/pwm.h"
+#include "Dev_Pwm.h"
 
-#define PWM_ALL_CH_NUM      8
-
-#define PWM_1_OUT_IO_NUM   2
-#define PWM_2_OUT_IO_NUM   4
-#define PWM_3_OUT_IO_NUM   5
-#define PWM_4_OUT_IO_NUM   12
-#define PWM_5_OUT_IO_NUM   13
-#define PWM_6_OUT_IO_NUM   14
-#define PWM_7_OUT_IO_NUM   15
-#define PWM_8_OUT_IO_NUM   16
-
-// PWM period 20000us(50hz), same as sover
-#define PWM_PERIOD    (20000)
 
 static const char *TAG = "Dev_Pwm";
 
@@ -47,26 +35,18 @@ const uint32_t pin_num[PWM_ALL_CH_NUM] = {
     PWM_3_OUT_IO_NUM,
     PWM_4_OUT_IO_NUM,
     PWM_5_OUT_IO_NUM,
-    PWM_6_OUT_IO_NUM,
-    PWM_7_OUT_IO_NUM,
-    PWM_8_OUT_IO_NUM
 };
 
 // duties table, real_duty = duties[x]/PERIOD
 uint32_t duties[PWM_ALL_CH_NUM] = {
-    1500, 1500, 1500, 1500,1500, 1500, 1500, 1500
+    1500, 1500, 1500, 1500,1500
 };
 
 // phase table, delay = (phase[x]/360)*PERIOD
 int16_t phase[PWM_ALL_CH_NUM] = {
-    0, 0, 0, 0, 0, 0, 0, 0
+    0, 0, 0, 0, 0
 };
 
-
-void Pwm_Poll()
-{
-    
-}
 
 void Set_Pwm_All_Chinel_Val(uint8_t ch_num,uint32_t *duty)
 {
@@ -74,9 +54,13 @@ void Set_Pwm_All_Chinel_Val(uint8_t ch_num,uint32_t *duty)
     {
         if(i < PWM_ALL_CH_NUM)
         {
-            if(duty[i] >= 1000 && duty[i] <= 2000)
+            if(duty[i] >= 900 && duty[i] <= 2000)
             {
                 pwm_set_duty(i, duty[i]);
+            }
+            else
+            {
+                pwm_set_duty(i, duties[i]);
             }
         }
     }
