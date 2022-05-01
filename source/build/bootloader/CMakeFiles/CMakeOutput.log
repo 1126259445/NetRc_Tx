@@ -1,0 +1,255 @@
+The target system is: Generic -  - 
+The host system is: Linux - 5.4.0-104-generic - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc 
+Build flags: -mlongcalls;-Wno-frame-address
+Id flags: -c 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+
+The C compiler identification is GNU, found in "/home/xc/ESP/NetRc/ESP8266_NetRc_TxRx/Ai-examples/1.SmartConfig_AirKiss_To_MQTT/build/bootloader/CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.o"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/xtensa-lx106-elf-g++ 
+Build flags: -mlongcalls;-Wno-frame-address
+Id flags: -c 
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+
+The CXX compiler identification is GNU, found in "/home/xc/ESP/NetRc/ESP8266_NetRc_TxRx/Ai-examples/1.SmartConfig_AirKiss_To_MQTT/build/bootloader/CMakeFiles/3.10.2/CompilerIdCXX/CMakeCXXCompilerId.o"
+
+Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+xtensa-lx106-elf-gcc (crosstool-NG crosstool-ng-1.22.0-100-ge567ec7) 5.2.0
+Copyright (C) 2015 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /home/xc/ESP/NetRc/ESP8266_NetRc_TxRx/Ai-examples/1.SmartConfig_AirKiss_To_MQTT/build/bootloader/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_455a3"
+[1/2] Building C object CMakeFiles/cmTC_455a3.dir/testCCompiler.c.obj
+[2/2] Linking C executable cmTC_455a3
+/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/5.2.0/../../../../xtensa-lx106-elf/bin/ld: warning: cannot find entry symbol _start; not setting start address
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/xc/ESP/NetRc/ESP8266_NetRc_TxRx/Ai-examples/1.SmartConfig_AirKiss_To_MQTT/build/bootloader/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_0bddc"
+[1/2] Building C object CMakeFiles/cmTC_0bddc.dir/CMakeCCompilerABI.c.obj
+[2/2] Linking C executable cmTC_0bddc
+Using built-in specs.
+COLLECT_GCC=/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc
+COLLECT_LTO_WRAPPER=/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/5.2.0/lto-wrapper
+Target: xtensa-lx106-elf
+Configured with: /builds/idf/crosstool-NG/.build/src/gcc-5.2.0/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=xtensa-lx106-elf --prefix=/builds/idf/crosstool-NG/builds/xtensa-lx106-elf --with-local-prefix=/builds/idf/crosstool-NG/builds/xtensa-lx106-elf/xtensa-lx106-elf/sysroot --with-sysroot=/builds/idf/crosstool-NG/builds/xtensa-lx106-elf/xtensa-lx106-elf/sysroot --with-newlib --enable-threads=no --disable-shared --with-pkgversion='crosstool-NG crosstool-ng-1.22.0-100-ge567ec7' --disable-__cxa_atexit --enable-cxx-flags='-fno-exceptions -fno-rtti' --with-gmp=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-mpfr=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-mpc=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-isl=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-cloog=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-libelf=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --disable-libgomp --disable-libmudflap --disable-libssp --disable-libquadmath --disable-libquadmath-support --disable-nls --disable-multilib --enable-languages=c,c++
+Thread model: single
+gcc version 5.2.0 (crosstool-NG crosstool-ng-1.22.0-100-ge567ec7) 
+COMPILER_PATH=/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/5.2.0/:/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../libexec/gcc/:/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/5.2.0/../../../../xtensa-lx106-elf/bin/
+LIBRARY_PATH=/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/5.2.0/:/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc/:/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/5.2.0/../../../../xtensa-lx106-elf/lib/:/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../xtensa-lx106-elf/sysroot/lib/:/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../xtensa-lx106-elf/sysroot/usr/lib/
+COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-nostdlib' '-v' '-o' 'cmTC_0bddc'
+ /home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/5.2.0/collect2 -plugin /home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/5.2.0/liblto_plugin.so -plugin-opt=/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/5.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccCiVGl7.res --sysroot=/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../xtensa-lx106-elf/sysroot -o cmTC_0bddc -L/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/5.2.0 -L/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc -L/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/5.2.0/../../../../xtensa-lx106-elf/lib -L/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../xtensa-lx106-elf/sysroot/lib -L/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../xtensa-lx106-elf/sysroot/usr/lib --gc-sections CMakeFiles/cmTC_0bddc.dir/CMakeCCompilerABI.c.obj
+/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/5.2.0/../../../../xtensa-lx106-elf/bin/ld: warning: cannot find entry symbol _start; not setting start address
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(xtensa-lx106-elf-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/xc/ESP/NetRc/ESP8266_NetRc_TxRx/Ai-examples/1.SmartConfig_AirKiss_To_MQTT/build/bootloader/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/ninja" "cmTC_0bddc"]
+  ignore line: [[1/2] Building C object CMakeFiles/cmTC_0bddc.dir/CMakeCCompilerABI.c.obj]
+  ignore line: [[2/2] Linking C executable cmTC_0bddc]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc]
+  ignore line: [COLLECT_LTO_WRAPPER=/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/5.2.0/lto-wrapper]
+  ignore line: [Target: xtensa-lx106-elf]
+  ignore line: [Configured with: /builds/idf/crosstool-NG/.build/src/gcc-5.2.0/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=xtensa-lx106-elf --prefix=/builds/idf/crosstool-NG/builds/xtensa-lx106-elf --with-local-prefix=/builds/idf/crosstool-NG/builds/xtensa-lx106-elf/xtensa-lx106-elf/sysroot --with-sysroot=/builds/idf/crosstool-NG/builds/xtensa-lx106-elf/xtensa-lx106-elf/sysroot --with-newlib --enable-threads=no --disable-shared --with-pkgversion='crosstool-NG crosstool-ng-1.22.0-100-ge567ec7' --disable-__cxa_atexit --enable-cxx-flags='-fno-exceptions -fno-rtti' --with-gmp=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-mpfr=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-mpc=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-isl=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-cloog=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-libelf=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --disable-libgomp --disable-libmudflap --disable-libssp --disable-libquadmath --disable-libquadmath-support --disable-nls --disable-multilib --enable-languages=c,c++]
+  ignore line: [Thread model: single]
+  ignore line: [gcc version 5.2.0 (crosstool-NG crosstool-ng-1.22.0-100-ge567ec7) ]
+  ignore line: [COMPILER_PATH=/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/5.2.0/:/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../libexec/gcc/:/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/5.2.0/../../../../xtensa-lx106-elf/bin/]
+  ignore line: [LIBRARY_PATH=/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/5.2.0/:/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc/:/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/5.2.0/../../../../xtensa-lx106-elf/lib/:/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../xtensa-lx106-elf/sysroot/lib/:/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../xtensa-lx106-elf/sysroot/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-nostdlib' '-v' '-o' 'cmTC_0bddc']
+  link line: [ /home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/5.2.0/collect2 -plugin /home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/5.2.0/liblto_plugin.so -plugin-opt=/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/5.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccCiVGl7.res --sysroot=/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../xtensa-lx106-elf/sysroot -o cmTC_0bddc -L/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/5.2.0 -L/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc -L/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/5.2.0/../../../../xtensa-lx106-elf/lib -L/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../xtensa-lx106-elf/sysroot/lib -L/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../xtensa-lx106-elf/sysroot/usr/lib --gc-sections CMakeFiles/cmTC_0bddc.dir/CMakeCCompilerABI.c.obj]
+    arg [/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/5.2.0/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/5.2.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/5.2.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccCiVGl7.res] ==> ignore
+    arg [--sysroot=/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../xtensa-lx106-elf/sysroot] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_0bddc] ==> ignore
+    arg [-L/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/5.2.0] ==> dir [/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/5.2.0]
+    arg [-L/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc] ==> dir [/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc]
+    arg [-L/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/5.2.0/../../../../xtensa-lx106-elf/lib] ==> dir [/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/5.2.0/../../../../xtensa-lx106-elf/lib]
+    arg [-L/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../xtensa-lx106-elf/sysroot/lib] ==> dir [/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../xtensa-lx106-elf/sysroot/lib]
+    arg [-L/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../xtensa-lx106-elf/sysroot/usr/lib] ==> dir [/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../xtensa-lx106-elf/sysroot/usr/lib]
+    arg [--gc-sections] ==> ignore
+    arg [CMakeFiles/cmTC_0bddc.dir/CMakeCCompilerABI.c.obj] ==> ignore
+  collapse library dir [/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/5.2.0] ==> [/home/xc/ESP/esp_tool/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/5.2.0]
+  collapse library dir [/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc] ==> [/home/xc/ESP/esp_tool/xtensa-lx106-elf/lib/gcc]
+  collapse library dir [/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/5.2.0/../../../../xtensa-lx106-elf/lib] ==> [/home/xc/ESP/esp_tool/xtensa-lx106-elf/xtensa-lx106-elf/lib]
+  collapse library dir [/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../xtensa-lx106-elf/sysroot/lib] ==> [/home/xc/ESP/esp_tool/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/lib]
+  collapse library dir [/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../xtensa-lx106-elf/sysroot/usr/lib] ==> [/home/xc/ESP/esp_tool/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/lib]
+  implicit libs: []
+  implicit dirs: [/home/xc/ESP/esp_tool/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/5.2.0;/home/xc/ESP/esp_tool/xtensa-lx106-elf/lib/gcc;/home/xc/ESP/esp_tool/xtensa-lx106-elf/xtensa-lx106-elf/lib;/home/xc/ESP/esp_tool/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/lib;/home/xc/ESP/esp_tool/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/lib]
+  implicit fwks: []
+
+
+
+
+Detecting C [-std=c11] compiler features compiled with the following output:
+Change Dir: /home/xc/ESP/NetRc/ESP8266_NetRc_TxRx/Ai-examples/1.SmartConfig_AirKiss_To_MQTT/build/bootloader/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_6c3de"
+[1/2] Building C object CMakeFiles/cmTC_6c3de.dir/feature_tests.c.obj
+[2/2] Linking C executable cmTC_6c3de
+/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/5.2.0/../../../../xtensa-lx106-elf/bin/ld: warning: cannot find entry symbol _start; not setting start address
+
+
+
+
+Detecting C [-std=c99] compiler features compiled with the following output:
+Change Dir: /home/xc/ESP/NetRc/ESP8266_NetRc_TxRx/Ai-examples/1.SmartConfig_AirKiss_To_MQTT/build/bootloader/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_aeeed"
+[1/2] Building C object CMakeFiles/cmTC_aeeed.dir/feature_tests.c.obj
+[2/2] Linking C executable cmTC_aeeed
+/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/5.2.0/../../../../xtensa-lx106-elf/bin/ld: warning: cannot find entry symbol _start; not setting start address
+
+
+
+
+Detecting C [-std=c90] compiler features compiled with the following output:
+Change Dir: /home/xc/ESP/NetRc/ESP8266_NetRc_TxRx/Ai-examples/1.SmartConfig_AirKiss_To_MQTT/build/bootloader/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_4b74a"
+[1/2] Building C object CMakeFiles/cmTC_4b74a.dir/feature_tests.c.obj
+[2/2] Linking C executable cmTC_4b74a
+/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/5.2.0/../../../../xtensa-lx106-elf/bin/ld: warning: cannot find entry symbol _start; not setting start address
+
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /home/xc/ESP/NetRc/ESP8266_NetRc_TxRx/Ai-examples/1.SmartConfig_AirKiss_To_MQTT/build/bootloader/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_99328"
+[1/2] Building CXX object CMakeFiles/cmTC_99328.dir/testCXXCompiler.cxx.obj
+[2/2] Linking CXX executable cmTC_99328
+/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/5.2.0/../../../../xtensa-lx106-elf/bin/ld: warning: cannot find entry symbol _start; not setting start address
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /home/xc/ESP/NetRc/ESP8266_NetRc_TxRx/Ai-examples/1.SmartConfig_AirKiss_To_MQTT/build/bootloader/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_6b00a"
+[1/2] Building CXX object CMakeFiles/cmTC_6b00a.dir/CMakeCXXCompilerABI.cpp.obj
+[2/2] Linking CXX executable cmTC_6b00a
+Using built-in specs.
+COLLECT_GCC=/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/xtensa-lx106-elf-g++
+COLLECT_LTO_WRAPPER=/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/5.2.0/lto-wrapper
+Target: xtensa-lx106-elf
+Configured with: /builds/idf/crosstool-NG/.build/src/gcc-5.2.0/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=xtensa-lx106-elf --prefix=/builds/idf/crosstool-NG/builds/xtensa-lx106-elf --with-local-prefix=/builds/idf/crosstool-NG/builds/xtensa-lx106-elf/xtensa-lx106-elf/sysroot --with-sysroot=/builds/idf/crosstool-NG/builds/xtensa-lx106-elf/xtensa-lx106-elf/sysroot --with-newlib --enable-threads=no --disable-shared --with-pkgversion='crosstool-NG crosstool-ng-1.22.0-100-ge567ec7' --disable-__cxa_atexit --enable-cxx-flags='-fno-exceptions -fno-rtti' --with-gmp=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-mpfr=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-mpc=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-isl=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-cloog=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-libelf=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --disable-libgomp --disable-libmudflap --disable-libssp --disable-libquadmath --disable-libquadmath-support --disable-nls --disable-multilib --enable-languages=c,c++
+Thread model: single
+gcc version 5.2.0 (crosstool-NG crosstool-ng-1.22.0-100-ge567ec7) 
+COMPILER_PATH=/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/5.2.0/:/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../libexec/gcc/:/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/5.2.0/../../../../xtensa-lx106-elf/bin/
+LIBRARY_PATH=/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/5.2.0/:/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc/:/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/5.2.0/../../../../xtensa-lx106-elf/lib/:/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../xtensa-lx106-elf/sysroot/lib/:/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../xtensa-lx106-elf/sysroot/usr/lib/
+COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-nostdlib' '-v' '-o' 'cmTC_6b00a'
+ /home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/5.2.0/collect2 -plugin /home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/5.2.0/liblto_plugin.so -plugin-opt=/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/5.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccbKjMBM.res --sysroot=/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../xtensa-lx106-elf/sysroot -o cmTC_6b00a -L/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/5.2.0 -L/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc -L/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/5.2.0/../../../../xtensa-lx106-elf/lib -L/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../xtensa-lx106-elf/sysroot/lib -L/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../xtensa-lx106-elf/sysroot/usr/lib --gc-sections CMakeFiles/cmTC_6b00a.dir/CMakeCXXCompilerABI.cpp.obj
+/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/5.2.0/../../../../xtensa-lx106-elf/bin/ld: warning: cannot find entry symbol _start; not setting start address
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(xtensa-lx106-elf-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/xc/ESP/NetRc/ESP8266_NetRc_TxRx/Ai-examples/1.SmartConfig_AirKiss_To_MQTT/build/bootloader/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/ninja" "cmTC_6b00a"]
+  ignore line: [[1/2] Building CXX object CMakeFiles/cmTC_6b00a.dir/CMakeCXXCompilerABI.cpp.obj]
+  ignore line: [[2/2] Linking CXX executable cmTC_6b00a]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/xtensa-lx106-elf-g++]
+  ignore line: [COLLECT_LTO_WRAPPER=/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/5.2.0/lto-wrapper]
+  ignore line: [Target: xtensa-lx106-elf]
+  ignore line: [Configured with: /builds/idf/crosstool-NG/.build/src/gcc-5.2.0/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=xtensa-lx106-elf --prefix=/builds/idf/crosstool-NG/builds/xtensa-lx106-elf --with-local-prefix=/builds/idf/crosstool-NG/builds/xtensa-lx106-elf/xtensa-lx106-elf/sysroot --with-sysroot=/builds/idf/crosstool-NG/builds/xtensa-lx106-elf/xtensa-lx106-elf/sysroot --with-newlib --enable-threads=no --disable-shared --with-pkgversion='crosstool-NG crosstool-ng-1.22.0-100-ge567ec7' --disable-__cxa_atexit --enable-cxx-flags='-fno-exceptions -fno-rtti' --with-gmp=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-mpfr=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-mpc=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-isl=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-cloog=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-libelf=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --disable-libgomp --disable-libmudflap --disable-libssp --disable-libquadmath --disable-libquadmath-support --disable-nls --disable-multilib --enable-languages=c,c++]
+  ignore line: [Thread model: single]
+  ignore line: [gcc version 5.2.0 (crosstool-NG crosstool-ng-1.22.0-100-ge567ec7) ]
+  ignore line: [COMPILER_PATH=/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/5.2.0/:/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../libexec/gcc/:/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/5.2.0/../../../../xtensa-lx106-elf/bin/]
+  ignore line: [LIBRARY_PATH=/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/5.2.0/:/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc/:/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/5.2.0/../../../../xtensa-lx106-elf/lib/:/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../xtensa-lx106-elf/sysroot/lib/:/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../xtensa-lx106-elf/sysroot/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-nostdlib' '-v' '-o' 'cmTC_6b00a']
+  link line: [ /home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/5.2.0/collect2 -plugin /home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/5.2.0/liblto_plugin.so -plugin-opt=/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/5.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccbKjMBM.res --sysroot=/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../xtensa-lx106-elf/sysroot -o cmTC_6b00a -L/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/5.2.0 -L/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc -L/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/5.2.0/../../../../xtensa-lx106-elf/lib -L/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../xtensa-lx106-elf/sysroot/lib -L/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../xtensa-lx106-elf/sysroot/usr/lib --gc-sections CMakeFiles/cmTC_6b00a.dir/CMakeCXXCompilerABI.cpp.obj]
+    arg [/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/5.2.0/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/5.2.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/5.2.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccbKjMBM.res] ==> ignore
+    arg [--sysroot=/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../xtensa-lx106-elf/sysroot] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_6b00a] ==> ignore
+    arg [-L/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/5.2.0] ==> dir [/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/5.2.0]
+    arg [-L/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc] ==> dir [/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc]
+    arg [-L/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/5.2.0/../../../../xtensa-lx106-elf/lib] ==> dir [/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/5.2.0/../../../../xtensa-lx106-elf/lib]
+    arg [-L/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../xtensa-lx106-elf/sysroot/lib] ==> dir [/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../xtensa-lx106-elf/sysroot/lib]
+    arg [-L/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../xtensa-lx106-elf/sysroot/usr/lib] ==> dir [/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../xtensa-lx106-elf/sysroot/usr/lib]
+    arg [--gc-sections] ==> ignore
+    arg [CMakeFiles/cmTC_6b00a.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
+  collapse library dir [/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/5.2.0] ==> [/home/xc/ESP/esp_tool/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/5.2.0]
+  collapse library dir [/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc] ==> [/home/xc/ESP/esp_tool/xtensa-lx106-elf/lib/gcc]
+  collapse library dir [/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/5.2.0/../../../../xtensa-lx106-elf/lib] ==> [/home/xc/ESP/esp_tool/xtensa-lx106-elf/xtensa-lx106-elf/lib]
+  collapse library dir [/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../xtensa-lx106-elf/sysroot/lib] ==> [/home/xc/ESP/esp_tool/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/lib]
+  collapse library dir [/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../xtensa-lx106-elf/sysroot/usr/lib] ==> [/home/xc/ESP/esp_tool/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/lib]
+  implicit libs: []
+  implicit dirs: [/home/xc/ESP/esp_tool/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/5.2.0;/home/xc/ESP/esp_tool/xtensa-lx106-elf/lib/gcc;/home/xc/ESP/esp_tool/xtensa-lx106-elf/xtensa-lx106-elf/lib;/home/xc/ESP/esp_tool/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/lib;/home/xc/ESP/esp_tool/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/lib]
+  implicit fwks: []
+
+
+
+
+Detecting CXX [-std=c++1z] compiler features compiled with the following output:
+Change Dir: /home/xc/ESP/NetRc/ESP8266_NetRc_TxRx/Ai-examples/1.SmartConfig_AirKiss_To_MQTT/build/bootloader/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_c0ea8"
+[1/2] Building CXX object CMakeFiles/cmTC_c0ea8.dir/feature_tests.cxx.obj
+[2/2] Linking CXX executable cmTC_c0ea8
+/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/5.2.0/../../../../xtensa-lx106-elf/bin/ld: warning: cannot find entry symbol _start; not setting start address
+
+
+
+
+Detecting CXX [-std=c++14] compiler features compiled with the following output:
+Change Dir: /home/xc/ESP/NetRc/ESP8266_NetRc_TxRx/Ai-examples/1.SmartConfig_AirKiss_To_MQTT/build/bootloader/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_7ddac"
+[1/2] Building CXX object CMakeFiles/cmTC_7ddac.dir/feature_tests.cxx.obj
+[2/2] Linking CXX executable cmTC_7ddac
+/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/5.2.0/../../../../xtensa-lx106-elf/bin/ld: warning: cannot find entry symbol _start; not setting start address
+
+
+
+
+Detecting CXX [-std=c++11] compiler features compiled with the following output:
+Change Dir: /home/xc/ESP/NetRc/ESP8266_NetRc_TxRx/Ai-examples/1.SmartConfig_AirKiss_To_MQTT/build/bootloader/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_0e5a5"
+[1/2] Building CXX object CMakeFiles/cmTC_0e5a5.dir/feature_tests.cxx.obj
+[2/2] Linking CXX executable cmTC_0e5a5
+/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/5.2.0/../../../../xtensa-lx106-elf/bin/ld: warning: cannot find entry symbol _start; not setting start address
+
+
+
+
+Detecting CXX [-std=c++98] compiler features compiled with the following output:
+Change Dir: /home/xc/ESP/NetRc/ESP8266_NetRc_TxRx/Ai-examples/1.SmartConfig_AirKiss_To_MQTT/build/bootloader/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_5afbb"
+[1/2] Building CXX object CMakeFiles/cmTC_5afbb.dir/feature_tests.cxx.obj
+[2/2] Linking CXX executable cmTC_5afbb
+/home/xc/ESP/esp_tool/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/5.2.0/../../../../xtensa-lx106-elf/bin/ld: warning: cannot find entry symbol _start; not setting start address
+
+
