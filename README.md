@@ -1,11 +1,34 @@
-<p align="center">
-  <img src="docs/_static/header.png" width="700px" height="300px" alt="Banner" />
-</p>
- 
+#网络遥控器开源项目
+## 项目介绍
+本项目使用ESP8266开发的4G原成遥控车改装套件， 通过接受遥控器原厂接收机的PWM信号解码为各通道的数字信号，使用MQTT通讯以发布订阅的形式将数据发布到MQTT服务器，就受端订阅发射端ID后，将数字信号还原为舵机使用的PWM信号以提供遥控车使用。
+## 发射端使用说明
+### 硬件连接
+网络遥控器发射端
+![1(1)](https://user-images.githubusercontent.com/63451966/166128316-c81e6f5b-4071-46fe-ae6f-bdcacde18795.png)
+使用5V2A以上的TYPEC供电 或者 使用电池供电 电压在8-24V 
+两种供电方式二选一即可
 
+遥控器接收机按照顺序 1 到 5顺序接上即可（注意不要插反）
+![1](https://user-images.githubusercontent.com/63451966/166128323-008add55-cdd8-43f8-bfb1-e0b45f2f1a77.png)
+### 配网
+1.设备上电 用电脑连接 NetRc_Tx 的 WIFI
+2.打开网页输入 192.168.4.1 访问配网界面
+![3](https://user-images.githubusercontent.com/63451966/166128331-43996b64-3da9-4c11-b3fb-c35509c98a14.png)
+3.输入要连接的wifi和对应的密码 (只能连接2.4G wifi)
+4.点击确定，完成配网
+5.记录设备设备MAC，此ID需要在接收端中填写进行配对
+### 设备状态
+
+| LED状态 | 含义 | 备注 |
+| --- | --- | --- |
+| 长亮 | 未连接网络 |  |
+| 慢闪 | 未接入接收机信号 |  |
+| 熄灭 | 正常工作 |  |
 -------------------------------------
-# WS相关项目说明
-本项目给予ESP-IDF的 RTosSDK上二次开发而来 以my_master_dev为我的主分支 master任然跟踪官方的代码（包括子模块）
+# NetRc相关开发说明
+基础工程仓库地址： https://gitee.com/xuhongv/AiThinkerProjectForESP.git
+
+使用UBUNTU1804虚拟机搭建开发环境具体可参考安信可官方文档 LINUX下SDK开发环境搭建 本方案基于ESP8266的RTOS SDK3.0版本开发而来,在xClouds开源架构下进行二次开发，下边时关于xClouds 开源架构的介绍
 
 # 关于  xClouds 开源架构
 
