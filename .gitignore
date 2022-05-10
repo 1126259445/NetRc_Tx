@@ -47,3 +47,4 @@ docs/doxygen_sqlite3.db
 Ai-examples/**/sdkconfig
 Ai-examples/**/sdkconfig.old
 Ai-examples/**/build
+source/build
