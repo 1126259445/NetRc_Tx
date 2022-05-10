@@ -74,6 +74,26 @@ static uint32_t get_time_us()
     return current_val;
 }
 
+
+#define FIFTER_NUM  5
+static uint16_t ch_data_fifter(uint8_t ch ,uint16_t new_data)
+{
+    uint32_t sum = 0,min = 2000,max = 1000;
+    static uint8_t index[10] = {0};
+    static uint16_t chbuf[10][FIFTER_NUM];
+    chbuf[ch][index[ch]] = new_data;
+    if(++index[ch]>=FIFTER_NUM) index[ch] = 0;
+
+    for(uint8_t i = 0; i < FIFTER_NUM;i++)
+    {
+        sum += chbuf[ch][i];
+        if(chbuf[ch][i] < min) min = chbuf[ch][i];
+        else if(chbuf[ch][i] > max) max = chbuf[ch][i];
+    }
+    return (sum - min - max)/(FIFTER_NUM - 2);
+}
+
+
 static void gpio_0_isr_handler(void *arg)
 {
     static uint32_t start_time = 0;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
@@ -96,7 +116,7 @@ static void gpio_0_isr_handler(void *arg)
         {
             current_ch_val = end_time + (TIM_MAX_VAL - start_time);
         }
-
+        current_ch_val = ch_data_fifter(0,current_ch_val);
         current_ch_val = LIMIT(current_ch_val,PWM_MIN_VAL,PWM_MAX_VAL);
         Rc.RC_ch[0] = (current_ch_val/PWMIN_STEP)*PWMIN_STEP;
         Rc.recv_time = get_time_us();
@@ -123,7 +143,7 @@ static void gpio_1_isr_handler(void *arg)
         {
             current_ch_val = end_time + (TIM_MAX_VAL - start_time);
         }
-
+        current_ch_val = ch_data_fifter(1,current_ch_val);
         current_ch_val = LIMIT(current_ch_val,PWM_MIN_VAL,PWM_MAX_VAL);
         Rc.RC_ch[1] = (current_ch_val/PWMIN_STEP)*PWMIN_STEP;
         Rc.recv_time = get_time_us();
@@ -150,7 +170,7 @@ static void gpio_2_isr_handler(void *arg)
         {
             current_ch_val = end_time + (TIM_MAX_VAL - start_time);
         }
-
+        current_ch_val = ch_data_fifter(2,current_ch_val);
         current_ch_val = LIMIT(current_ch_val,PWM_MIN_VAL,PWM_MAX_VAL);
         Rc.RC_ch[2] = (current_ch_val/PWMIN_STEP)*PWMIN_STEP;
         Rc.recv_time = get_time_us();
@@ -177,7 +197,7 @@ static void gpio_3_isr_handler(void *arg)
         {
             current_ch_val = end_time + (TIM_MAX_VAL - start_time);
         }
-
+        current_ch_val = ch_data_fifter(3,current_ch_val);
         current_ch_val = LIMIT(current_ch_val,PWM_MIN_VAL,PWM_MAX_VAL);
         Rc.RC_ch[3] = (current_ch_val/PWMIN_STEP)*PWMIN_STEP;
         Rc.recv_time = get_time_us();
@@ -204,7 +224,7 @@ static void gpio_4_isr_handler(void *arg)
         {
             current_ch_val = end_time + (TIM_MAX_VAL - start_time);
         }
-
+        current_ch_val = ch_data_fifter(4,current_ch_val);
         current_ch_val = LIMIT(current_ch_val,PWM_MIN_VAL,PWM_MAX_VAL);
         Rc.RC_ch[4] = (current_ch_val/PWMIN_STEP)*PWMIN_STEP;
         Rc.recv_time = get_time_us();
