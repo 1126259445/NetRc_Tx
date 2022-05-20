@@ -257,7 +257,7 @@ static void Task_Show_PwmIn(void *pvParameters)
         else
         {
             Rc.ppm_lost = 0;
-            ESP_LOGI(TAG, "RC_ch= %d,%d,%d,%d,%d,%d,%d,%d,%d%d",Rc.RC_ch[0],Rc.RC_ch[1],Rc.RC_ch[2],Rc.RC_ch[3],Rc.RC_ch[4],Rc.RC_ch[5],Rc.RC_ch[6],Rc.RC_ch[7],Rc.RC_ch[8],Rc.RC_ch[9]);
+            ESP_LOGI(TAG, "RC_ch= %d,%d,%d,%d,%d,%d,%d,%d,%d,%d",Rc.RC_ch[0],Rc.RC_ch[1],Rc.RC_ch[2],Rc.RC_ch[3],Rc.RC_ch[4],Rc.RC_ch[5],Rc.RC_ch[6],Rc.RC_ch[7],Rc.RC_ch[8],Rc.RC_ch[9]);
         }
         vTaskDelay(500/portTICK_RATE_MS);
     }
