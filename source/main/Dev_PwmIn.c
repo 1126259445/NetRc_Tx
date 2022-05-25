@@ -30,6 +30,9 @@
 
 static const char *TAG = "Dev_PwmIn";
 
+#define PWM_START_LEAVE 0
+#define PWM_END_LEAVE   1
+
 #define SW_TIME         0   
 #define HW_TIME         1
 #define USE_TIME        SW_TIME
@@ -103,10 +106,10 @@ static void gpio_0_isr_handler(void *arg)
     int16_t current_ch_val = 0;
 
 
-    if(gpio_get_level(GPIO_INPUT_IO_0) == 1)
+    if(gpio_get_level(GPIO_INPUT_IO_0) == PWM_START_LEAVE)
     {
         start_time = get_time_us();
-    }else if(gpio_get_level(GPIO_INPUT_IO_0) == 0)
+    }else if(gpio_get_level(GPIO_INPUT_IO_0) == PWM_END_LEAVE)
     {
         end_time = get_time_us();
 
@@ -131,10 +134,10 @@ static void gpio_1_isr_handler(void *arg)
     static uint32_t end_time = 0;
     int16_t current_ch_val = 0;
 
-    if(gpio_get_level(GPIO_INPUT_IO_1) == 1)
+    if(gpio_get_level(GPIO_INPUT_IO_1) == PWM_START_LEAVE)
     {
         start_time = get_time_us();
-    }else if(gpio_get_level(GPIO_INPUT_IO_1) == 0)
+    }else if(gpio_get_level(GPIO_INPUT_IO_1) == PWM_END_LEAVE)
     {
         end_time = get_time_us();
         if(end_time > start_time)
@@ -158,10 +161,10 @@ static void gpio_2_isr_handler(void *arg)
     static uint32_t end_time = 0;
     int16_t current_ch_val = 0;
 
-    if(gpio_get_level(GPIO_INPUT_IO_2) == 1)
+    if(gpio_get_level(GPIO_INPUT_IO_2) == PWM_START_LEAVE)
     {
         start_time = get_time_us();
-    }else if(gpio_get_level(GPIO_INPUT_IO_2) == 0)
+    }else if(gpio_get_level(GPIO_INPUT_IO_2) == PWM_END_LEAVE)
     {
         end_time = get_time_us();
         if(end_time > start_time)
@@ -185,10 +188,10 @@ static void gpio_3_isr_handler(void *arg)
     static uint32_t end_time = 0;
     int16_t current_ch_val = 0;
 
-    if(gpio_get_level(GPIO_INPUT_IO_3) == 1)
+    if(gpio_get_level(GPIO_INPUT_IO_3) == PWM_START_LEAVE)
     {
         start_time = get_time_us();
-    }else if(gpio_get_level(GPIO_INPUT_IO_3) == 0)
+    }else if(gpio_get_level(GPIO_INPUT_IO_3) == PWM_END_LEAVE)
     {
         end_time = get_time_us();
         if(end_time > start_time)
@@ -212,10 +215,10 @@ static void gpio_4_isr_handler(void *arg)
     static uint32_t end_time = 0;
     int16_t current_ch_val = 0;
 
-    if(gpio_get_level(GPIO_INPUT_IO_4) == 1)
+    if(gpio_get_level(GPIO_INPUT_IO_4) == PWM_START_LEAVE)
     {
         start_time = get_time_us();
-    }else if(gpio_get_level(GPIO_INPUT_IO_4) == 0)
+    }else if(gpio_get_level(GPIO_INPUT_IO_4) == PWM_END_LEAVE)
     {
         end_time = get_time_us();
         if(end_time > start_time)
