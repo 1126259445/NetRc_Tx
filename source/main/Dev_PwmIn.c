@@ -37,7 +37,6 @@ static const char *TAG = "Dev_PwmIn";
 #define HW_TIME         1
 #define USE_TIME        SW_TIME
 #define TIM_MAX_VAL     0xFFFFFFFF
-#define PWMIN_FIFTER    50
 #define PWMIN_STEP      50
 #define PWM_MIN_VAL     1000
 #define PWM_MAX_VAL     2000
@@ -245,6 +244,8 @@ static void Task_Show_PwmIn(void *pvParameters)
     static uint8_t lost_state = 0xff;
     while(1)
     {
+        lost_state = 0xff;
+
         for(ch_num = 0;ch_num < USER_CH_NUM ;ch_num++)
         {
             if(get_time_us() > Rc.recv_time[ch_num])
