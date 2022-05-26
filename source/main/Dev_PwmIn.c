@@ -38,7 +38,7 @@ static const char *TAG = "Dev_PwmIn";
 #define USE_TIME        SW_TIME
 #define TIM_MAX_VAL     0xFFFFFFFF
 #define PWMIN_STEP      50
-#define PWM_MIN_VAL     1000
+#define PWM_MIN_VAL     1500
 #define PWM_MAX_VAL     2000
 
 #define USER_CH_NUM     5
@@ -54,7 +54,7 @@ static const char *TAG = "Dev_PwmIn";
 
 #define LIMIT(val,low,high) (val>high?high:val<low?low:val)
 
-Rc_t Rc = {{1500,1500,1500,1500,PWM_MIN_VAL,PWM_MIN_VAL,PWM_MIN_VAL,PWM_MIN_VAL,PWM_MIN_VAL,PWM_MIN_VAL}};
+Rc_t Rc = {{1500,1500,1500,1500,1500,PWM_MIN_VAL,PWM_MIN_VAL,PWM_MIN_VAL,PWM_MIN_VAL,PWM_MIN_VAL}};
 
 static uint32_t hw_time_count = 0;
 /******************************************************************************
