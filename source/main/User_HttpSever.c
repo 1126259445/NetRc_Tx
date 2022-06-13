@@ -107,6 +107,8 @@ esp_err_t home_get_handler(httpd_req_t *req)
                     router_wifi_save_info((uint8_t*)ssid,(uint8_t*)password);
                     ESP_LOGI(TAG, "HOME Found URL query parameter => ssid=%s", ssid);
                     ESP_LOGI(TAG, "HOME Found URL query parameter => password=%s", password);
+                    free(buf);
+                    return ESP_OK;
                 }
                 else
                 {
@@ -130,7 +132,15 @@ esp_err_t home_get_handler(httpd_req_t *req)
     return ESP_OK;
 }
 
-char homeindex[800] = {0};
+esp_err_t sys_reset_get_handler(httpd_req_t *req)
+{
+     ESP_LOGI(TAG, "sys_reset_get_handler");
+     esp_restart();
+     return ESP_OK;
+}
+
+
+char homeindex[1000] = {0};
 httpd_uri_t home = {
     .uri       = "/",
     .method    = HTTP_GET,
@@ -140,6 +150,14 @@ httpd_uri_t home = {
     .user_ctx  = homeindex
 };
 
+httpd_uri_t sys_reset ={
+    .uri       = "/sys_reset",
+    .method    = HTTP_GET,
+    .handler   = sys_reset_get_handler,
+    /* Let's pass response string in user
+     * context to demonstrate it's usage */
+//    .user_ctx  = home_html
+};
 
 httpd_handle_t start_webserver(void)
 {
@@ -152,6 +170,7 @@ httpd_handle_t start_webserver(void)
         // Set URI handlers
         ESP_LOGI(TAG, "Registering URI handlers");
         httpd_register_uri_handler(server, &home);
+        httpd_register_uri_handler(server, &sys_reset);
         return server;
     }
 
@@ -183,11 +202,11 @@ void HttpSever_Init()
 {
     sprintf(homeindex,"<!DOCTYPE html><html lang='en'><head><meta charset='UTF8'><title>NetRc设置 \
     </title><script type='text/javascript'>function WifiClicked(){ssid=document.getElementById('ssid').value; \
-    password=document.getElementById('password').value;alert('SSID: '+ssid+'   PASSWORD: '+password)}</script></head> \
-    <body bgcolor=lightblue><style>#myHeader{padding-top:250px;color:black;text-align:center}</style><div id=myHeader><h1>NetRc配网</h1> \
-    <form name='my'>WiFi名称：<input type='text'name='ssid'id='ssid'placeholder='请输入您WiFi的名称'><br>WiFi密码：<input type='text' \
-    name='password'id='password'placeholder='请输入您WiFi的密码'><input type='submit'value='连接'onclick='WifiClicked()'><br><br> \
-    设备MAC：%s<br></form></body></html>",deviceUUID);
+    password=document.getElementById('password').value;alert('SSID: '+ssid+'   PASSWORD: '+password)} \
+    </script></head><body bgcolor=lightblue><style>#myHeader{padding-top:250px;color:black;text-align:center} \
+    </style><div id=myHeader><h1>NetRc配网</h1><form name='my'>WiFi名称：<input type='text'name='ssid'id='ssid'placeholder='请输入您WiFi的名称'> \
+    <br>WiFi密码：<input type='text'name='password'id='password'placeholder='请输入您WiFi的密码'><input type='submit'value='连接'onclick='WifiClicked()'> \
+    <br><br>设备MAC：%s<br></form><br>系统设置：<br><form action='sys_reset'><input type='submit'value='重启'></form></body></html>",deviceUUID);
 
     server = start_webserver();
 }
