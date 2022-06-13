@@ -38,7 +38,8 @@ static const char *TAG = "Dev_PwmIn";
 #define USE_TIME        SW_TIME
 #define TIM_MAX_VAL     0xFFFFFFFF
 #define PWMIN_STEP      50
-#define PWM_MIN_VAL     1500
+#define PWM_MIN_VAL     1000
+#define PWM_DEFAULT_VAL 1500
 #define PWM_MAX_VAL     2000
 
 #define USER_CH_NUM     5
@@ -54,7 +55,7 @@ static const char *TAG = "Dev_PwmIn";
 
 #define LIMIT(val,low,high) (val>high?high:val<low?low:val)
 
-Rc_t Rc = {{1500,1500,1500,1500,1500,PWM_MIN_VAL,PWM_MIN_VAL,PWM_MIN_VAL,PWM_MIN_VAL,PWM_MIN_VAL}};
+Rc_t Rc = {{1500,1500,1500,1500,1500,PWM_DEFAULT_VAL,PWM_DEFAULT_VAL,PWM_DEFAULT_VAL,PWM_DEFAULT_VAL,PWM_DEFAULT_VAL}};
 
 static uint32_t hw_time_count = 0;
 /******************************************************************************
@@ -82,7 +83,7 @@ static uint32_t get_time_us()
 #define FIFTER_NUM  5
 static uint16_t ch_data_fifter(uint8_t ch ,uint16_t new_data)
 {
-    uint32_t sum = 0,min = 2000,max = 1000;
+    uint32_t sum = 0,min = PWM_MAX_VAL,max = PWM_MIN_VAL;
     static uint8_t index[USER_CH_NUM] = {0};
     static uint16_t chbuf[USER_CH_NUM][FIFTER_NUM];
     chbuf[ch][index[ch]] = new_data;
@@ -259,7 +260,7 @@ static void Task_Show_PwmIn(void *pvParameters)
 
             if(recv_lost_time > 30000)
             {
-                Rc.RC_ch[ch_num] = 1500;
+                Rc.RC_ch[ch_num] = PWM_DEFAULT_VAL;
                 lost_state = lost_state | (1 << ch_num);
             }
             else
@@ -271,7 +272,7 @@ static void Task_Show_PwmIn(void *pvParameters)
         if(lost_state == 0xff)
         {
             Rc.ppm_lost = 1;
-            memset(Rc.RC_ch,1500,10);
+            memset(Rc.RC_ch,PWM_DEFAULT_VAL,10);
             ESP_LOGI(TAG, "RC_PMM_IN lost!!!!!!!!!!!!");
         }
         else
